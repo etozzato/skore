@@ -3,12 +3,22 @@ form role='form'
   .form-group
     label.control-label for='home-player'
       | Home Player: &nbsp;
-    = view Ember.Select id='home-player' content=players optionValuePath="content.id" optionLabelPath="content.fullName" value=model.player_home
+    = view Ember.Select id='home-player' class='form-control' content=players optionValuePath="content.id" optionLabelPath="content.fullName" value=model.player_home
 
   .form-group
     label.control-label for='away-player'
       | Away Player: &nbsp;
-    = view Ember.Select id='away-player' content=players optionValuePath="content.id" optionLabelPath="content.fullName" value=model.player_away
+    = view Ember.Select id='away-player' class='form-control' content=players optionValuePath="content.id" optionLabelPath="content.fullName" value=model.player_away
 
-  button.btn.btn-lg.btn-warning click='create model'
-    | Create
+  .form-group
+    label.control-label for='set-count'
+      | Set Count: &nbsp;
+    = view Ember.Select id='set-count' class='form-control' content=setCount  optionValuePath="content.id" optionLabelPath="content.label" value=model.set_count
+
+  .form-group
+    label.control-label for='points'
+      | Points: &nbsp;
+    = view Ember.Select id='points' class='form-control' content=points  optionValuePath="content.id" optionLabelPath="content.label" value=model.points
+
+  button.btn.btn-lg.btn-success.pull-right click='create model'
+    | Create GAME!

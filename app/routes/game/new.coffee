@@ -4,7 +4,7 @@ GameNewRoute = Ember.Route.extend
 
   setupController: (controller) ->
     controller.set('players', @store.find('player'))
-    controller.set('model', @store.find('player', 1))
+    controller.set('game', @store.createRecord('game', {}))
 
 
 `export default GameNewRoute`

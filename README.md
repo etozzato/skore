@@ -1,8 +1,6 @@
 # Skore
 
-This README outlines the details of collaborating on this Ember application.
-
-A short introduction of this app could easily go here.
+Learn EmberJS with ember-cli and ember-qunit
 
 ## Prerequisites
 
@@ -13,8 +11,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone git@github.com:etozzato/skore.git`
+* `cd skore`
 * `npm install`
 * `bower install`
 
