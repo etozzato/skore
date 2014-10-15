@@ -1,0 +1,9 @@
+.navbar-header
+  a.navbar-brand href="/"
+    | &rarr; skore
+
+  ul.nav.navbar-nav
+    li
+
+
+outlet
