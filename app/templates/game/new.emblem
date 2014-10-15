@@ -1,0 +1,14 @@
+form role='form'
+
+  .form-group
+    label.control-label for='home-player'
+      | Home Player: &nbsp;
+    = view Ember.Select id='home-player' content=players optionValuePath="content.id" optionLabelPath="content.fullName" value=model.player_home
+
+  .form-group
+    label.control-label for='away-player'
+      | Away Player: &nbsp;
+    = view Ember.Select id='away-player' content=players optionValuePath="content.id" optionLabelPath="content.fullName" value=model.player_away
+
+  button.btn.btn-lg.btn-warning click='create model'
+    | Create

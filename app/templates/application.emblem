@@ -1,9 +1,11 @@
-.navbar-header
-  a.navbar-brand href="/"
-    | &rarr; skore
+.container
+  .row
+    .header
+      .navbar-header
+        link-to 'game.new' class='btn btn-lg btn-warning'
+          | New Game &rarr;
+  .row
+    hr
 
-  ul.nav.navbar-nav
-    li
-
-
-outlet
+  .row
+    outlet
