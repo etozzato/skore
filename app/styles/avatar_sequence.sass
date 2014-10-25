@@ -1,0 +1,92 @@
+$z-img: 50
+$z-sequence1: 40
+$z-sequence2: 30
+$z-sequence3: 20
+
+.avatar
+  position: relative
+  img
+    position: absolute
+    top: 0
+    left: 0
+    z-index: $z-img
+  .circle,
+  &::before,
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    @include circle()
+    background: rgba(0,0,0,.1)
+  
+  //Set up z-indexs
+  .circle
+    z-index: $z-sequence2
+  &::before
+    content: ''
+    z-index: $z-sequence1
+  &::after
+    content: ''
+    z-index: $z-sequence3
+  
+  //Set up circle initial sizes
+  &.avatar-md
+    .circle,
+    &::before,
+    &::after
+      @include transition(scale .5s linear, opacity .5s linear, background .5s linear, all .5s linear)      
+      width: $avatar-md
+      height: $avatar-md
+      opacity: 0
+
+//Sequence 1
+.lead-sm
+  &.avatar-md
+    &::before
+      // @include scale(1.0)
+      opacity: 1
+      -webkit-animation-name: pulse-sm
+      -webkit-animation-duration: .4s
+      -webkit-animation-iteration-count: infinite
+      -webkit-animation-timing-function: ease-in-out
+      -webkit-animation-direction: alternate
+
+.lead-md
+  &.avatar-md
+    .circle
+      @include scale(1.1) 
+      opacity: 1
+      -webkit-animation-name: pulse-md
+      -webkit-animation-duration: .5s
+      -webkit-animation-iteration-count: infinite
+      -webkit-animation-timing-function: ease-in-out
+      -webkit-animation-direction: alternate  
+  
+.lead-lg
+  &.avatar-md
+    &::after
+      @include scale(1.2) 
+      opacity: 1
+      -webkit-animation-name: pulse-lg
+      -webkit-animation-duration: .6s
+      -webkit-animation-iteration-count: infinite
+      -webkit-animation-timing-function: ease-in-out
+      -webkit-animation-direction: alternate
+
+.fire-sm
+  .circle,
+  &::before,
+  &::after
+    background: rgba(255,120,0,.5)
+
+@-webkit-keyframes pulse-sm
+  100%
+    @include scale(1.1)
+
+@-webkit-keyframes pulse-md
+  100%
+    @include scale(1.2)
+
+@-webkit-keyframes pulse-lg
+  100%
+    @include scale(1.3)

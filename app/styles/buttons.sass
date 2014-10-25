@@ -1,0 +1,41 @@
+.btn
+  display: inline-block
+  margin-bottom: 0 // For input.btn
+  font-weight: normal
+  text-align: center
+  vertical-align: middle
+  cursor: pointer
+  background-image: none // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent
+  white-space: nowrap
+  @include circle()
+  padding: 8px 12px
+  font-size: $font-size
+  &:hover
+    text-decoration: none
+
+.btn-default
+  border-color: $grey-3
+  color: $grey-3
+  &:hover
+    border-color: darken($grey-3, 8%)
+    color: darken($grey-3, 8%)
+
+.btn-circle-sm
+  padding: 1px 0px
+  width: $btn-cricle-sm
+  height: $btn-cricle-sm
+  font-size: 24px
+  line-height: 1
+.btn-circle-md
+  padding: 0px
+  width: $btn-cricle-md
+  height: $btn-cricle-md
+  font-size: 50px
+  line-height: .9
+  font-weight: 300
+.btn-circle-lg
+  width: $btn-cricle-lg
+  height: $btn-cricle-lg
+  font-size: 16px
+  line-height: 1

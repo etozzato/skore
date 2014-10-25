@@ -7,6 +7,7 @@ Router = Ember.Router.extend
 Router.map ->
   @resource 'game', ->
     @route 'new'
+    @route 'show'
     @route 'edit', { path: '/game/:game_id' }
 
 `export default Router`

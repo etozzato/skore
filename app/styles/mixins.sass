@@ -1,0 +1,37 @@
+// *********
+// Mixins
+// *********
+
+@mixin clearfix()
+  &:before,
+  &:after
+    content: ' '
+    display: table
+  &:after
+    clear: both
+
+@mixin transition($transition...)
+  -webkit-transition: $transition
+          transition: $transition
+
+@mixin circle()
+	border-radius: 50%
+
+@mixin scale($ratio)
+  -ms-transform: scale($ratio) /* IE 9 */
+  -webkit-transform: scale($ratio) /* Chrome, Safari, Opera */
+  transform: scale($ratio)
+
+@mixin horz-center($width)
+  //Requires a parent relative container with explicit width
+  position: absolute
+  left: 50%
+  margin-left: -($width / 2)
+
+@mixin user-select($user-select)
+  -webkit-touch-callout: $user-select
+  -webkit-user-select: $user-select
+  -khtml-user-select: $user-select
+  -moz-user-select: $user-select
+  -ms-user-select: $user-select
+  user-select: $user-select

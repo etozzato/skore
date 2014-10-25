@@ -1,11 +1,22 @@
-.container
-  .row
-    .header
-      .navbar-header
-        link-to 'game.new' class='btn btn-lg btn-warning'
-          | New Game &rarr;
-  .row
-    hr
+/ .container
+/   .row
+/     .header
+/       .navbar-header
+/         link-to 'game.new' class='btn btn-lg btn-warning'
+/           | New Game &rarr;
+/   .row
+/     hr
 
-  .row
-    outlet
+/   .row
+/     outlet
+
+
+header 
+  .hamburger class=showMenu:open click='toggleMenu'
+    span
+
+nav class=showMenu:open
+  h1 Menu
+
+main class=showMenu:open
+  outlet

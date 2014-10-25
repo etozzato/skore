@@ -1,0 +1,39 @@
+.container
+  .col-2
+    .card
+      .player
+        .avatar.avatar-md class={p1LeadSm:lead-sm p1LeadMd:lead-md p1LeadLg:lead-lg}
+          / .lead-sm.lead-md.lead-lg
+          //.fire-sm
+          img src='/assets/images/temp/avatar_temp.png'
+          .circle
+        .name
+          |@
+          p1Name
+      
+      .score
+        .count click='addPlayer1Point' 
+          p1Score
+      
+      .actions  
+        a.btn.btn-default.btn-circle-md click='subtractPlayer1Point'
+          |-
+
+  .col-2 
+    .card
+      .player
+        .avatar.avatar-md class={p2LeadSm:lead-sm p2LeadMd:lead-md p2LeadLg:lead-lg}
+          //.fire-sm
+          img src='/assets/images/temp/avatar_temp.png'
+          .circle
+        .name
+          |@
+          p2Name
+      
+      .score
+        .count click='addPlayer2Point' 
+          p2Score
+      
+      .actions
+        a.btn.btn-default.btn-circle-md click='subtractPlayer2Point' 
+          |-

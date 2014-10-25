@@ -1,0 +1,43 @@
+// *********
+// Header
+// *********
+
+header
+  position: fixed
+  z-index: $header-zindex
+  top: 15px
+  left: 20px
+  // @include transition(left .1s ease-in-out, right .1s ease-in-out)
+  &.open
+    left: $menu-width + 20px
+
+.hamburger
+  position: relative
+  width: 32px
+  height: 27px
+  span,
+  &:after,
+  &:before
+    position: absolute
+    content: ''
+    display: block
+    width: 32px
+    height: 4px
+    background: $menu-bg
+    @include transition(background .2s linear)
+  span
+    top: 0px
+  &:after
+    top: 10px
+  &:before
+    top: 20px
+  &.open
+    span,
+    &::after,
+    &::before  
+      background: #fff
+
+  //Hover
+  &:hover
+    cursor: pointer
+

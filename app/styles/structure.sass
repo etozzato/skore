@@ -1,0 +1,38 @@
+// *********
+// Structure
+// *********
+
+
+body
+  overflow: hidden
+
+nav
+  background: $menu-bg
+  overflow: hidden
+  width: $menu-width
+  position: fixed
+  z-index: $menu-zindex
+  top: 0
+  left: -$menu-width
+  bottom: 0
+  padding: 40px 20px
+  @include transition(left .1s ease-in-out)
+  color: $menu-text-color
+  &.open
+    left: 0
+
+main
+  background: $main-bg
+  overflow: hidden
+  position: fixed
+  z-index: $main-zindex
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  @include transition(left .1s ease-in-out, right .1s ease-in-out)
+  &.open
+    left: $menu-width
+    right: -$menu-width
+
+

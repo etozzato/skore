@@ -1,0 +1,40 @@
+.card
+  text-align: center
+  // border: 1px solid $grey-3
+  border-radius: 10px
+  .player
+    .avatar
+    .name
+      font-size: $font-size-lg
+      color: $color-text-diminished
+      font-weight: bold
+      margin: 20px 0
+  .score
+    .count
+      @include user-select(none)
+      text-shadow: 0 1px 1px rgba(255,255,255,.9)
+      line-height: .8
+  .actions
+    .btn
+      @include user-select(none)
+
+//Dimensions
+//lg
+.card,
+.card .player,
+.card .score,
+.card .actions
+  width: $score-card-width-lg
+  @include horz-center($score-card-width-lg)
+.card
+  height: 600px
+  top: 60px
+  .player
+    top: 40px
+  .score
+    top: 280px
+    .count
+      font-size: 15em
+  .actions
+    bottom: 30px
+
